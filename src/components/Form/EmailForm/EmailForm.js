@@ -3,12 +3,44 @@ import React, { useRef } from "react";
 import classes from "./EmailForm.module.css";
 import Button from "../../UI/Button/Button";
 import EmailInput from "../Input/EmailInput";
+import useInput from "../../../hooks/use-input";
 
 export default function EmailForm(props) {
   const inputRef = useRef(null);
+  let error = "";
+
+  const validateInput = value => {
+    if (value.length >= 1 && value.length <= 5) {
+      error = "Email is required!";
+      return false;
+    }
+    if (value.length > 5 && !value.includes("@")) {
+      error = "Please enter a valid email address.";
+      return false;
+    }
+    if (!value || value.length <= 5) {
+      error = "Email is required!";
+      return false;
+    }
+    return true;
+  };
+
+  const {
+    enteredInput: enteredEmail,
+    valueIsValid: enteredEmailIsValid,
+    valueIsInvalid: enteredEmailIsInvalid,
+    inputIsFocus: isFocus,
+    handleInputChange: emailChangeHandler,
+    handleInputBlur: emailBlurHandler,
+    handleInputFocus: emailFocusHandler,
+    reset: resetEmailInputForm,
+  } = useInput(validateInput);
+
   const handleSubmit = e => {
     e.preventDefault();
-    if (!inputRef.current.value) return;
+    if (!enteredEmailIsValid) return;
+    inputRef.current.blur();
+    resetEmailInputForm();
     console.log("Form Submitted!");
   };
 
@@ -29,6 +61,13 @@ export default function EmailForm(props) {
           id={props.id}
           type={props.type}
           label={props.label}
+          value={enteredEmail}
+          onChange={emailChangeHandler}
+          onBlur={emailBlurHandler}
+          onFocus={emailFocusHandler}
+          focusState={isFocus}
+          isInvalid={enteredEmailIsInvalid}
+          errorMsg={error}
         />
         <Button onClick={handleBtnClick} className={`btn--primary btn--lg`}>
           Get Started &#10095;
