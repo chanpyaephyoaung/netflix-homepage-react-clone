@@ -1,0 +1,99 @@
+.form--email {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.8em;
+}
+
+.form--email__title {
+  padding: 0 1em;
+  text-align: center;
+}
+
+.form--email__controls {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.8em;
+}
+
+.form--email__controls button {
+  align-self: center;
+}
+
+@media (min-width: 550px) {
+  .form--email__title {
+    font-size: 2.2rem;
+    padding: 0 3.5em;
+  }
+
+  .form--email__title,
+  .form--email__controls {
+    max-width: 640px;
+  }
+
+  .form--email__controls {
+    padding: 0 5em;
+  }
+}
+
+@media (min-width: 950px) {
+  .form--email {
+    row-gap: 2rem;
+  }
+
+  .form--email__title {
+    max-width: 670px;
+    font-size: 2.1rem;
+    padding: 0;
+  }
+
+  .form--email__controls {
+    max-width: 770px;
+  }
+
+  .form--email__controls {
+    flex-direction: row;
+    column-gap: 0.1em;
+  }
+
+  .form--email__controls div {
+    flex: 1;
+    max-height: 100%;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+  }
+
+  .form--email__controls input {
+    border-radius: 0;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+  }
+
+  .form--email__controls button {
+    align-self: flex-start;
+    height: 8.5rem;
+    font-size: 2.7rem;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    padding: 0 1.8em;
+  }
+}
+
+@media (min-width: 1450px) {
+  .form--email__title {
+    max-width: 750px;
+    font-size: 2.1rem;
+    padding: 0;
+  }
+
+  .form--email__controls {
+    padding: 0;
+  }
+
+  .form--email__controls button {
+    height: 7rem;
+  }
+}

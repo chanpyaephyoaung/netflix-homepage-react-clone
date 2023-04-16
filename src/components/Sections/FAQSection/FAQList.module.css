@@ -1,0 +1,17 @@
+.section--faq__list {
+  list-style: none;
+  margin: 4em 0;
+}
+
+@media (min-width: 550px) {
+  .section--faq__list {
+    padding: 0 2em;
+  }
+}
+
+@media (min-width: 950px) {
+  .section--faq__list {
+    max-width: 815px;
+    margin: 4em auto;
+  }
+}

@@ -1,0 +1,26 @@
+.section--faq__title {
+  text-align: center;
+  padding: 0 0.5em;
+}
+
+.section--faq form {
+  width: var(--section-width);
+  margin: 0 auto;
+}
+
+@media (min-width: 550px) {
+  .section--faq {
+    width: var(--section-width);
+    margin: 0 auto;
+  }
+
+  .section--faq form {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1100px) {
+  .section--faq {
+    padding: 4em 0;
+  }
+}

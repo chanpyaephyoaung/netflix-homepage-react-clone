@@ -1,0 +1,37 @@
+.header {
+  width: var(--section-width);
+  margin: 0 auto;
+  padding-top: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  width: 11.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 550px) {
+  .logo {
+    width: 12.5rem;
+  }
+}
+
+@media (min-width: 950px) {
+  .logo {
+    width: 14.5rem;
+  }
+}
+
+@media (min-width: 1450px) {
+  .header {
+    width: 93%;
+  }
+
+  .logo {
+    width: 16.5rem;
+  }
+}

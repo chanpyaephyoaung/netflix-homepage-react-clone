@@ -1,0 +1,21 @@
+.error__text {
+  padding: 0.5em 0;
+  margin-left: 6px;
+  text-align: left;
+}
+
+@media (min-width: 950px) {
+  .error__text {
+    margin-left: 0;
+    padding: 0;
+    position: absolute;
+    bottom: -3rem;
+    left: 6px;
+  }
+}
+
+.error__text--sign-in {
+  font-size: 1.3rem;
+  margin-top: 0.7em;
+  margin-left: 3px;
+}

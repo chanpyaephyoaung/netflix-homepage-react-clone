@@ -1,0 +1,105 @@
+.form--sign-in__wrapper {
+  width: var(--section-width);
+  margin: 0 auto;
+  margin-top: 3em;
+  padding-bottom: 13rem;
+}
+
+.form--sign-in {
+  margin: 3em 0 2em 0;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2em;
+}
+
+.form--sign-in__help {
+  display: flex;
+  align-items: center;
+  color: var(--color-white);
+}
+
+.form--sign-in__help__controls {
+  display: flex;
+  margin-right: auto;
+  font-size: 1.6rem;
+  color: var(--color-grey-4);
+  position: relative;
+}
+
+.form--sign-in__help__controls input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.form--sign-in__help__controls .checkbox {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  top: 2.5px;
+  left: 0;
+  background-color: var(--color-black-faded);
+  border-radius: 2px;
+}
+
+.form--sign-in__help__controls .checkbox::after {
+  content: "";
+  position: absolute;
+  top: 2.7px;
+  left: 6.05px;
+  width: 5.3px;
+  height: 10px;
+  border: solid var(--color-black);
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  z-index: 10;
+  display: none;
+}
+
+.form--sign-in__help__controls label {
+  margin-left: 23px;
+}
+
+.form--sign-in__help__controls input:checked + label .checkbox::after {
+  display: block;
+}
+
+.form--sign-in__help__controls label:focus .checkbox {
+  background-color: var(--color-white);
+}
+
+.need-help__link,
+.need-help__link:link,
+.need-help__link:visited {
+  font-size: 1.6rem;
+  color: var(--color-grey-4);
+  text-decoration: none;
+}
+
+.need-help__link:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 450px) {
+  .form--sign-in__wrapper {
+    margin-top: 5em;
+  }
+}
+
+@media (min-width: 740px) {
+  .form--sign-in__wrapper {
+    max-width: 450px;
+    min-height: 660px;
+    margin-top: 0;
+    margin-bottom: 8em;
+    border-radius: 4px;
+    padding: 4em 6em;
+    background: rgba(0, 0, 0, 0.75);
+  }
+
+  .form--sign-in__title {
+    font-size: 3.2rem;
+  }
+}

@@ -1,0 +1,33 @@
+.footer__item {
+  width: 50%;
+}
+
+.footer__link,
+.footer__link:link,
+.footer__link:visited {
+  text-decoration: none;
+}
+
+.footer__link:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 500px) {
+  .footer__item {
+    width: calc(100% / 3);
+  }
+
+  .footer__link {
+    padding-right: 0.3em;
+  }
+}
+
+@media (min-width: 950px) {
+  .footer__item {
+    width: calc(100% / 4);
+  }
+
+  .footer__link {
+    padding-right: 0.3em;
+  }
+}

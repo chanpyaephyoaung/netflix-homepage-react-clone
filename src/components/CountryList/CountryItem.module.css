@@ -1,0 +1,17 @@
+.country-list__item {
+  padding: 1em 2em;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.country-list__item:hover {
+  background-color: var(--color-black-faded);
+}
+
+.country-list__link,
+.country-list__link:link,
+.country-list__link:visited {
+  font-size: 1.7rem;
+  color: var(--color-white);
+  text-decoration: none;
+}

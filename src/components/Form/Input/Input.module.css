@@ -1,0 +1,138 @@
+.form__controls {
+  width: 100%;
+  position: relative;
+}
+
+.form__controls__input__wrapper {
+  position: relative;
+  background-color: var(--color-white);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.form__controls label {
+  font-size: 1.7rem;
+  color: var(--color-grey-3);
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  transition: font 0.1s ease, top 0.1s ease, transform 0.1s ease;
+}
+
+.form__controls input {
+  background-color: inherit;
+  color: var(--color-black);
+  width: 100%;
+  height: 6rem;
+  border: none;
+  padding: 10px 10px 0;
+}
+
+.form__controls input:focus {
+  border: 1px solid #0071eb;
+  outline: none;
+}
+
+.form__controls label.focus,
+.form__controls.focus label.focus {
+  font-size: 1.3rem;
+  font-weight: 600;
+  top: 4px;
+  transform: translateY(0);
+}
+
+.form__controls__input__wrapper--dark label {
+  left: 20px;
+}
+
+.form__controls__input__wrapper--dark input {
+  padding: 10px 20px 0 20px;
+}
+
+.form__controls__input__wrapper--dark {
+  background-color: var(--color-grey-2);
+  color: var(--color-white);
+}
+
+.form__controls__input__wrapper--dark input {
+  color: var(--color-white);
+}
+
+.form__controls__input__wrapper--dark input:focus {
+  border: none;
+  background-color: #454545;
+}
+
+.form__controls__input__wrapper--dark input.error-border {
+  border-bottom: 2px solid var(--color-error-yellow);
+}
+
+@media (min-width: 550px) {
+  .form__controls input {
+    height: 7rem;
+  }
+
+  .form__controls label.focus,
+  .form__controls.focus label.focus {
+    font-size: 1.5rem;
+    top: 6px;
+  }
+
+  .form__controls__sign-in label.focus,
+  .form__controls__sign-in.focus label.focus {
+    font-size: 1.4rem;
+    top: 10px;
+  }
+
+  .form__controls input,
+  .form__controls__input__wrapper--dark input {
+    font-size: 1.7rem;
+    padding-top: 17px;
+  }
+}
+
+@media (min-width: 950px) {
+  .form__controls input {
+    height: 8.5rem;
+  }
+
+  .form__controls label.focus,
+  .form__controls.focus label.focus {
+    font-size: 1.4rem;
+    top: 9px;
+  }
+
+  .form__controls__sign-in label.focus,
+  .form__controls__sign-in.focus label.focus {
+    font-size: 1.3rem;
+    top: 5px;
+  }
+
+  .form__controls input {
+    font-size: 1.6rem;
+    padding-top: 18px;
+  }
+
+  .form__controls__input__wrapper--dark input {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1450px) {
+  .form__controls input {
+    height: 7rem;
+  }
+
+  .form__controls label.focus,
+  .form__controls.focus label.focus {
+    font-size: 1.2rem;
+    top: 9px;
+  }
+}
+
+@media (min-width: 740px) {
+  .form__controls .form--sign-in__input {
+    height: 5.5rem;
+  }
+}

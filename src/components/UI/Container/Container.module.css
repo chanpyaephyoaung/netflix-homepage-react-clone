@@ -1,0 +1,36 @@
+.container {
+  padding: 8em 0;
+  border-bottom: 8px solid var(--color-black-light);
+  position: relative;
+  z-index: 1000;
+}
+
+.container--bg {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.container.borderless {
+  border-bottom: none;
+}
+
+@media (min-width: 740px) {
+  .container--footer {
+    width: 100%;
+    padding: 2.5em;
+    background: rgba(0, 0, 0, 0.75);
+    margin-top: auto;
+  }
+}
+
+@media (min-width: 950px) {
+  .container {
+    padding: 6em;
+  }
+}
+
+@media (min-width: 1450px) {
+  .container {
+    padding: 7em;
+  }
+}

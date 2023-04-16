@@ -1,0 +1,54 @@
+.form--sign-in__other {
+  margin-top: 7em;
+}
+
+.form--sign-in__other__sign-up {
+  display: flex;
+  align-items: center;
+  column-gap: 0.3em;
+  font-size: 1.9rem;
+  color: var(--color-black-faded);
+}
+
+.form--sign-in__other__sign-up__link,
+.form--sign-in__other__sign-up__link:link,
+.form--sign-in__other__sign-up__link:visited {
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.form--sign-in__other__sign-up__link:hover {
+  text-decoration: underline;
+}
+
+.form--sign-in__other__text {
+  font-size: 1.7rem;
+  color: var(--color-grey-3);
+  margin-top: 1em;
+  line-height: 1.2;
+}
+
+.form--sign-in__other__text__link,
+.form--sign-in__other__text__link:link,
+.form--sign-in__other__text__link:visited {
+  color: #0071eb;
+  text-decoration: none;
+}
+
+.form--sign-in__other__text__link:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 740px) {
+  .form--sign-in__other {
+    margin-top: 7em;
+  }
+
+  .form--sign-in__other__sign-up {
+    font-size: 1.6rem;
+  }
+
+  .form--sign-in__other__text {
+    font-size: 1.4rem;
+  }
+}
